@@ -1,8 +1,14 @@
 // viewports
 $desktop-width: 1024px;
+$pre-desktop-width: 1023px;
 $tablet-width: 768px;
+$pre-tablet-width: 767px;
 $mobile-width: 320px;
-$mobile-width-only: 767px;
+
+// body min-width (по макету)
+$desktop-body-min-width: 1920px;
+$tablet-body-min-width: $tablet-width;
+$mobile-body-min-width: $mobile-width;
 
 // darken color`s group ( dcg )
 

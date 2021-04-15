@@ -3,6 +3,18 @@
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100vh;
+
+  @media (min-width: $desktop-width) {
+    min-width: 1920px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    min-width: $tablet-body-min-width;
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    min-width: $mobile-body-min-width;
+  }
 }
 
 .zero-edges {
@@ -21,4 +33,31 @@
   padding: 0;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.image {
+  display: block;
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: min-content;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    width: 60.938%;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    width: 100%;
+  }
 }
