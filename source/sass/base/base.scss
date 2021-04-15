@@ -4,6 +4,11 @@
   grid-template-rows: min-content 1fr min-content;
   min-height: 100vh;
 
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+
   @media (min-width: $desktop-width) {
     min-width: 1920px;
   }
