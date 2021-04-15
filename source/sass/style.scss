@@ -1,7 +1,16 @@
 @import "~normalize.css/normalize";
-@import "./base/fonts";
-@import "./base/vars";
-@import "./base/base";
+@import "./base/fonts.scss";
+@import "./base/vars.scss";
+@import "./base/base.scss";
+
+// header
+@import "./blocks/header.scss";
+
+// nav
+@import "./blocks/nav.scss";
+
+// phone
+@import "./blocks/phone.scss";
 
 // hidden entities
 @import "./base/hidden-entities.scss";

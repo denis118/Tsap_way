@@ -1,0 +1,64 @@
+.nav__list {
+  display: flex;
+
+  @media (max-width: $pre-desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.nav__item {
+  @media (max-width: $pre-desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $lcg-2;
+  }
+
+  &::after {
+    @media (max-width: $pre-desktop-width) {
+      content: "";
+      display: block;
+      width: 7.4px;
+      height: 12px;
+      background-image: $right-arrow;
+      margin-right: 25px;
+    }
+  }
+
+  &--directions {
+    @media (min-width: $desktop-width) {
+      margin-right: 40px;
+    }
+  }
+
+  &--prices {
+    @media (max-width: $pre-desktop-width) {
+      margin-right: 0;
+      margin-top: 64px;
+      margin-bottom: 284px;
+    }
+  }
+}
+
+.nav__link {
+  color: inherit;
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+
+    padding-top: 43px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 15px;
+  }
+}

@@ -3,6 +3,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100vh;
+  background-color: $lcg-1;
 
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 16px;
@@ -10,7 +11,7 @@
   font-weight: 400;
 
   @media (min-width: $desktop-width) {
-    min-width: 1920px;
+    min-width: $desktop-body-min-width;
   }
 
   @media (max-width: $pre-desktop-width) {
@@ -59,10 +60,13 @@
   margin: 0 auto;
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
     width: 60.938%;
   }
 
   @media (max-width: $pre-desktop-width) {
+    grid-template-columns: 1fr;
     width: 100%;
   }
 }
