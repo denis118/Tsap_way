@@ -10,6 +10,12 @@
   @media (max-width: $pre-desktop-width) {
     color: $dcg-3;
   }
+
+  &--js {
+    @media (max-width: $pre-desktop-width) {
+      position: relative;
+    }
+  }
 }
 
 .header__logo-link {
@@ -22,7 +28,6 @@
     justify-self: start;
     margin-left: 21px;
     margin-top: 18.5px;
-    z-index: 1;
   }
 
   @media (max-width: $pre-tablet-width) {
@@ -50,6 +55,16 @@
   @media (max-width: $pre-desktop-width) {
     padding-top: 134px;
   }
+
+  &--opened {
+    @media (max-width: $pre-desktop-width) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $lcg-1;
+    }
+  }
 }
 
 .header__nav {
@@ -69,21 +84,34 @@
   }
 }
 
-.header__burger {
+.header__toggle {
   @media (max-width: $pre-desktop-width) {
     grid-column-start: 1;
     grid-column-end: -1;
     justify-self: end;
+    z-index: 1;
+  }
+
+  &--burger {
+    @media (max-width: $pre-desktop-width) {
+      padding: 10px 21px 7px;
+      background-color: $mcg-1;
+    }
+  }
+
+  &--nav-cross {
+    @media (max-width: $pre-desktop-width) {
+      padding: 14px 13px 8px;
+      background-color: transparent;
+    }
   }
 }
 
-.header__element {
-  &--common-track {
-    @media (max-width: $pre-desktop-width) {
-      grid-column-start: 1;
-      grid-column-end: -1;
-      grid-row-start: 1;
-      grid-row-end: -1;
-    }
+.header__one-track {
+  @media (max-width: $pre-desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: -1;
   }
 }

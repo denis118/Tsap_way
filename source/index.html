@@ -11,14 +11,14 @@
 <body class="body zero-edges">
   <header class="header">
     <div class="header__container container">
-      <a class="header__logo-link link header__element header__element--common-track">
+      <a class="header__logo-link header__one-track link">
         <img class="header__logo-img image"
           src="./img/content/logo.svg"
           width="58"
           height="22"
           alt="Логотип">
       </a>
-      <div class="header__box header__element header__element--common-track">
+      <div class="header__box header__one-track">
         <nav class="header__nav nav">
           <ul class="nav__list list zero-edges">
             <li class="nav__item nav__item--directions">
@@ -49,8 +49,34 @@
           +7 (499) -784-684-46
         </a>
       </div>
-      <button class="header__burger header__element header__element--common-track button hidden-on-desktop hidden-entity"
-        id="burger"></button>
+      <button class="header__toggle header__one-track button hidden-on-desktop hidden-entity">
+
+        <span class="visually-hidden hidden-entity" id="description-for-burger">
+          Кнопка открытия меню навигации
+        </span>
+        <svg class="header__toggle-svg header__burger-svg hidden-entity"
+          width="30"
+          height="30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          id="burger-svg">
+          <use xlink:href="#burger-icon"></use>
+        </svg>
+
+        <span class="visually-hidden hidden-entity" id="description-for-cross-in-nav">
+          Кнопка закрытия меню навигации
+        </span>
+        <svg class="header__toggle-svg header__cross-svg hidden-entity"
+          width="24"
+          height="25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          id="cross-in-nav-svg">
+          <use xlink:href="#cross-in-nav-icon"></use>
+        </svg>
+      </button>
     </div>
   </header>
   <main class="main"></main>
@@ -63,7 +89,22 @@
         d="M7.396 8.624c-.084-1.198.182-2.378.885-3.327.61-.86 1.404-1.33 2.362-1.605.806-.24 1.334.054 1.567.95.332 1.34.806 2.68.978 4.092.055.62-.347 1.5-.782 1.952-1.09 1.073-.863 1.854-.036 3.478.257.524.664 1.43 1.459 2.628.827 1.207 1.265 1.855 2.328 1.305 1.18-.594 2.041-.212 2.932.747.604.693 1.268 1.288 1.872 1.98.873 1.03.834 1.74.151 2.467-1.229 1.34-3.258 1.783-4.768.886-.833-.489-1.664-1.128-2.325-1.874-2.914-3.32-5.016-7.182-6.281-11.54a10.989 10.989 0 01-.342-2.139z"
         stroke="#141517" stroke-width="2" stroke-miterlimit="10" />
     </symbol>
+
+    <!-- burger-icon -->
+    <symbol id="burger-icon" viewBox="0 0 30 30">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M3.75 21h22.5v-1H3.75v1zm0-6.25h22.5v-1H3.75v1zm0-7.25v1h22.5v-1H3.75z"
+        fill="#fff" />
+    </symbol>
+
+    <!-- cross-in-nav-icon -->
+    <symbol id="cross-in-nav-icon" viewBox="0 0 24 25">
+      <path d="M1 23.721L23 1m0 22.721L1 1" stroke="#141517" stroke-opacity=".2"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
   </svg>
+
+  <script src="./js/index.min.js" defer></script>
 </body>
 
 </html>

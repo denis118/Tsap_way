@@ -10,6 +10,7 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const del = require('del');
 const imagemin = require('gulp-imagemin');
+const minify = require('gulp-minify');
 const bs = require('browser-sync').create();
 
 // Cleaning
@@ -83,6 +84,20 @@ const minifyImages = () => {
 
 exports.minifyImages = minifyImages;
 
+// JS
+
+const jsmin = () => {
+  return gulp.src('source/js/index.js')
+    .pipe(minify({
+      ext: {
+        min: '.min.js'
+      }
+    }))
+    .pipe(gulp.dest('build/js'));
+}
+
+exports.jsmin = jsmin;
+
 // Server
 
 const serve = (done) => {
@@ -106,7 +121,8 @@ const build = gulp.series(
     copyFonts,
     minifyHtml,
     compileStyles,
-    minifyImages
+    minifyImages,
+    jsmin
   )
 );
 
@@ -120,7 +136,8 @@ exports.default = gulp.series(
     copyFonts, // в конце пересмотреть требования к сборке
     copyImages, // в конце пересмотреть требования к сборке
     minifyHtml,
-    compileStyles
+    compileStyles,
+    jsmin
   ),
   serve
 );
