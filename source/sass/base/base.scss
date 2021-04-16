@@ -23,6 +23,23 @@
   }
 }
 
+.container {
+  display: grid;
+  grid-auto-rows: min-content;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    width: 60.938%;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
 .zero-edges {
   margin: 0;
   padding: 0;
@@ -52,21 +69,4 @@
 
 .image {
   display: block;
-}
-
-.container {
-  display: grid;
-  grid-auto-rows: min-content;
-  margin: 0 auto;
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 30px;
-    width: 60.938%;
-  }
-
-  @media (max-width: $pre-desktop-width) {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
 }
