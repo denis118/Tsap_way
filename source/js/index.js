@@ -13,8 +13,6 @@ const toggleMenu = () => {
   const burgerSvg = document.querySelector('#burger-svg');
   const navCrossSvg = document.querySelector('#cross-in-nav-svg');
 
-  const header = { isModified: false };
-
   const modifyHeader = () => {
     headerContainer.classList.add('header__container--js');
     headerBox.classList.add('hidden-entity');
@@ -24,6 +22,18 @@ const toggleMenu = () => {
       burgerDescription,
       burgerSvg
     ].forEach(item => item.classList.remove('hidden-entity'));
+    return undefined;
+  };
+
+  const restoreHeader = () => {
+    headerContainer.classList.remove('header__container--js');
+    headerBox.classList.remove('hidden-entity');
+    toggle.classList.remove('header__toggle--burger');
+    [
+      toggle,
+      burgerDescription,
+      burgerSvg
+    ].forEach(item => item.classList.add('hidden-entity'));
     return undefined;
   };
 
@@ -61,94 +71,81 @@ const toggleMenu = () => {
     return undefined;
   };
 
-  const eraseEventListeners = () => {
-    toggle.addEventListener('click', () => {
-      headerBox.classList.contains('hidden-entity')
-        ? openMenu()
-        : closeMenu();
-      return undefined;
-    });
+  const onToggleClick = () => {
+    headerBox.classList.contains('header__box--opened')
+      ? closeMenu()
+      : openMenu();
     return undefined;
   };
 
-  return [
-    header,
-    modifyHeader,
+  const setEventListeners = () => {
+    toggle.addEventListener('click', onToggleClick);
+    toggle.setAttribute('is-listened', 'true');
+    return undefined;
+  };
+
+  const eraseEventListeners = () => {
+    toggle.removeEventListener('click', onToggleClick);
+    toggle.removeAttribute('is-listened');
+    return undefined;
+  };
+
+  return {
+    toggle,
     openMenu,
     closeMenu,
+    modifyHeader,
+    restoreHeader,
+    setEventListeners,
     eraseEventListeners
-  ];
+  };
 };
 
 // WINDOW
 
-const onWindowResize = () => {
-  const [header] = toggleMenu();
+const onWindowResize = (function () {
+  const {
+    toggle,
+    closeMenu,
+    modifyHeader,
+    restoreHeader,
+    setEventListeners,
+    eraseEventListeners
+  } = toggleMenu();
+  let isModified = false;
 
-  if (!header.isModified) {
-    if (document.documentElement.clientWidth < DESKTOP_WIDTH) {
-      const [
-        modifyHeader,
-        eraseEventListeners
-      ] = toggleMenu();
+  return function () {
+    const screenWidth = document.documentElement.clientWidth;
 
-      // [
-      //   modifyHeader,
-      //   eraseEventListeners
-      // ].forEach(item => item());
+    if (!isModified) {
+      if (screenWidth < DESKTOP_WIDTH) {
+        modifyHeader();
 
-      // modifyHeader();
-      eraseEventListeners();
+        if (!toggle.getAttribute('is-listened')) {
+          setEventListeners();
+        }
 
-      header.isModified = true;
-      console.log('pre-desktop');
+        isModified = true;
+      }
     }
-  }
 
-  if (header.isModified) {
-    if (document.documentElement.clientWidth === DESKTOP_WIDTH
-      || document.documentElement.clientWidth > DESKTOP_WIDTH) {
-      const [closeMenu] = toggleMenu();
-      closeMenu();
+    if (isModified) {
+      if (screenWidth === DESKTOP_WIDTH
+        || screenWidth > DESKTOP_WIDTH) {
+        [
+          closeMenu,
+          restoreHeader
+        ].forEach(item => item());
 
-      header.isModified = false;
-      console.log('desktop');
+        if (toggle.getAttribute('is-listened')) {
+          eraseEventListeners();
+        }
+
+        isModified = false;
+      }
     }
+    return undefined;
   }
-
-  return undefined;
-};
-
-// const onWindowResize = () => {
-//   let isModified = false;
-
-//   return function () {
-//     const screenWidth = document.documentElement.clientWidth;
-//       if (!isModified) {
-//         if (screenWidth < DESKTOP_WIDTH) {
-//           toggleMenu();
-//           isModified = true;
-//           console.log('in');
-//         }
-//       }
-
-//       if (isModified) {
-//         if (screenWidth > DESKTOP_WIDTH || screenWidth === DESKTOP_WIDTH) {
-//           toggleMenu();
-//           isModified = true;
-//           console.log('in');
-//         }
-//       }
-//     return undefined;
-//   };
-// };
-
-
-
-// window.addEventListener('resize', () => {
-//   const screenWidth = document.documentElement.clientWidth;
-//   return screenWidth < DESKTOP_WIDTH ? toggleMenu() : undefined;
-// });
+})();
 
 window.addEventListener('resize', onWindowResize);
-console.log('ok');
