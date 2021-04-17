@@ -2,6 +2,10 @@
   @media (min-width: $desktop-width) {
     padding-left: 13px;
   }
+
+  @media (max-width: $pre-desktop-width) {
+    padding-left: 21px;
+  }
 }
 
 .next-travels__list {
@@ -11,21 +15,23 @@
 
 .next-travels__item {
   &:nth-child(3n + 2) {
-    @media (min-width: $desktop-width) {
-      margin-left: 51px;
+    margin-left: 51px;
+
+    @media (max-width: $pre-desktop-width) {
+      margin-left: 45px;
     }
   }
 
   &:nth-child(3n + 3) {
-    @media (min-width: $desktop-width) {
-      margin-left: 50px;
-    }
+    margin-left: 50px;
   }
 }
 
 .next-travels__sublist {
-  @media (min-width: $desktop-width) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: $pre-desktop-width) {
+    margin-bottom: 27px;
   }
 }
 
@@ -35,8 +41,6 @@
   font-weight: inherit;
 
   &:not(:first-child) {
-    @media (min-width: $desktop-width) {
-      margin-top: 10px;
-    }
+    margin-top: 10px;
   }
 }

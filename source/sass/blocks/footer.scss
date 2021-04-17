@@ -6,21 +6,29 @@
 }
 
 .footer__container {
-  // outline: 1px dashed rgb(0, 38, 255);  // delete!!!
-  // outline-offset: -1px;  // delete!!!
+  outline: 1px dashed rgb(0, 38, 255);  // delete!!!
+  outline-offset: -1px;  // delete!!!
 
   @media (min-width: $desktop-width) {
     padding-bottom: 71px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(2, min-content);
+    column-gap: 0;
   }
 }
 
 .footer__section {
   &:not(:last-of-type) {
-    @media (min-width: $desktop-width) {
-      background-image: $line-in-footer;
-      background-repeat: no-repeat;
-      background-position: right 0 top 0;
-      background-size: 2px 189px;
+    background-image: $line-in-footer;
+    background-repeat: no-repeat;
+    background-position: right 0 top 0;
+    background-size: 2px 189px;
+
+    @media (max-width: $pre-desktop-width) {
+      background-size: 2px 177px;
     }
   }
 
@@ -28,9 +36,13 @@
     @media (min-width: $desktop-width) {
       grid-column-start: 1;
       grid-column-end: 6;
-
       box-sizing: border-box;
       width: 403px;
+    }
+
+    @media (max-width: $pre-desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 2;
     }
   }
 
@@ -41,6 +53,14 @@
       margin-left: -8px;
       width: 301px;
     }
+
+    @media (max-width: $pre-desktop-width) {
+      grid-column-start: 2;
+      grid-column-end: -1;
+      padding-right: 93px;
+      padding-left: 50px;
+      background-image: none;
+    }
   }
 
   &--corporate-travels {
@@ -48,6 +68,24 @@
       grid-column-start: 9;
       grid-column-end: -1;
       padding-left: 41px;
+    }
+
+    @media (max-width: $pre-desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 32px;
+      padding-bottom: 50px;
+
+      background-image: $big-line-in-footer;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 726px 2px;
     }
   }
 }
@@ -58,12 +96,18 @@
   line-height: 32px;
   font-weight: 600;
   box-sizing: border-box;
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 22px;
-  }
+  margin-bottom: 22px;
 }
 
 .footer__corporate-travels-info {
   line-height: 23.8px;
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    width: 94.531%;
+    text-align: center;
+  }
 }

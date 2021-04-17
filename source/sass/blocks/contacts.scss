@@ -9,9 +9,7 @@
 
 .contacts__item {
   &--phone {
-    @media (min-width: $desktop-width) {
-      margin-top: 19px;
-    }
+    margin-top: 19px;
   }
 }
 
@@ -27,5 +25,16 @@
     margin-right: 15px;
     margin-top: -2px;
     background-image: $mail;
+
+    @media (max-width: $pre-desktop-width) {
+      margin-right: 13px;
+    }
+  }
+
+  &::after {
+    @media (max-width: $pre-desktop-width) {
+      content: attr(data-label);
+      display: block;
+    }
   }
 }
