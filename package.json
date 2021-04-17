@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run stylelint",
+    "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^10.2.5",
     "browser-sync": "2.26.14",
     "del": "^6.0.0",
