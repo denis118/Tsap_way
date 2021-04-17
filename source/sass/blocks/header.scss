@@ -1,6 +1,6 @@
 .header__container {
-  outline: 1px dashed red;  // delete!!!
-  outline-offset: -1px;  // delete!!!
+  // outline: 1px dashed red;  // delete!!!
+  // outline-offset: -1px;  // delete!!!
 
   @media (min-width: $desktop-width) {
     align-items: center;
@@ -78,6 +78,7 @@
 .header__phone {
   @media (min-width: $desktop-width) {
     padding-right: 13px;
+    color: inherit;
   }
 }
 

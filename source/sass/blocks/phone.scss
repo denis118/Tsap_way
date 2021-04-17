@@ -4,9 +4,22 @@
   line-height: 32px;
   display: flex;
   padding-top: 4px;
+
+  &--footer {
+    font-size: 16px;
+    padding-top: 0;
+  }
 }
 
 .phone__svg {
+  fill: none;
   margin-right: 12px;
   margin-top: 2px;
+  color: $dcg-2;
+
+  &--footer {
+    color: $lcg-3;
+    margin-right: 12px;
+    margin-top: -4px;
+  }
 }

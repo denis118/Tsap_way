@@ -1,39 +1,69 @@
+.footer {
+  font-size: 14px;
+  line-height: 17.07px;
+  font-weight: 400;
+  color: $dcg-4;
+}
+
 .footer__container {
-  outline: 1px dashed rgb(0, 38, 255);  // delete!!!
-  outline-offset: -1px;  // delete!!!
+  // outline: 1px dashed rgb(0, 38, 255);  // delete!!!
+  // outline-offset: -1px;  // delete!!!
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 75px;
+    padding-bottom: 71px;
   }
 }
 
 .footer__section {
+  &:not(:last-of-type) {
+    @media (min-width: $desktop-width) {
+      background-image: $line-in-footer;
+      background-repeat: no-repeat;
+      background-position: right 0 top 0;
+      background-size: 2px 189px;
+    }
+  }
+
   &--next-travels {
     @media (min-width: $desktop-width) {
       grid-column-start: 1;
-      grid-column-end: 5;
+      grid-column-end: 6;
+
+      box-sizing: border-box;
+      width: 403px;
     }
   }
 
   &--contacts {
     @media (min-width: $desktop-width) {
-      grid-column-start: 5;
-      grid-column-end: 8;
+      grid-column-start: 6;
+      grid-column-end: 9;
+      margin-left: -8px;
+      width: 301px;
     }
   }
 
   &--corporate-travels {
     @media (min-width: $desktop-width) {
-      grid-column-start: 8;
+      grid-column-start: 9;
       grid-column-end: -1;
+      padding-left: 41px;
     }
   }
 }
 
 .footer__heading {
-  color: inherit;
+  color: $dcg-2;
   font-size: 18px;
   line-height: 32px;
   font-weight: 600;
   box-sizing: border-box;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.footer__corporate-travels-info {
+  line-height: 23.8px;
 }

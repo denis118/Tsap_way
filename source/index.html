@@ -41,7 +41,6 @@
           <svg class="phone__svg"
             width="30"
             height="30"
-            fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true">
             <use xlink:href="#phone-icon"></use>
@@ -159,20 +158,19 @@
         </h3>
         <ul class="contacts__list list zero-edges">
           <li class="contacts__item contacts__item--mail">
-            <a class="contacts__mail"
+            <a class="contacts__contact contacts__mail"
               href="mailto:puteshestviemechta@gmail.ru"
               aria-label="Электронная почта">
               puteshestviemechta@gmail.ru
             </a>
           </li>
           <li class="contacts__item contacts__item--phone">
-            <a class="contacts__phone phone phone--in-footer"
+            <a class="contacts__contact contacts__phone phone phone--footer"
               href="tel:+749978468446"
               aria-label="Контактный телефон">
-              <svg class="phone__svg"
+              <svg class="phone__svg phone__svg--footer"
                 width="30"
                 height="30"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true">
                 <use xlink:href="#phone-icon"></use>
@@ -186,8 +184,25 @@
         <h3 class="footer__section-heading footer__heading zero-edges">
           Корпоративные путешествия
         </h3>
-        <p class="footer__corporate-travels-info">
-          Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением
+        <p class="footer__corporate-travels-info zero-edges">
+          <span class="footer__info-span words-splitter">
+            Также вы можете заказать индивидуальное
+          </span>
+          <span class="footer__info-span words-splitter">
+            путешествие под вашу компанию.
+          </span>
+          <span class="footer__info-span words-splitter">
+            Подобные туры очень сближают
+          </span>
+          <span class="footer__info-span words-splitter">
+            компанию, помогают поддерживать
+          </span>
+          <span class="footer__info-span words-splitter">
+            корпоративный дух, а также являются
+          </span>
+          <span class="footer__info-span words-splitter">
+            оличным времяпрепровождением
+          </span>
         </p>
       </section>
     </div>
@@ -198,7 +213,7 @@
     <symbol id="phone-icon" viewBox="0 0 30 30">
       <path
         d="M7.396 8.624c-.084-1.198.182-2.378.885-3.327.61-.86 1.404-1.33 2.362-1.605.806-.24 1.334.054 1.567.95.332 1.34.806 2.68.978 4.092.055.62-.347 1.5-.782 1.952-1.09 1.073-.863 1.854-.036 3.478.257.524.664 1.43 1.459 2.628.827 1.207 1.265 1.855 2.328 1.305 1.18-.594 2.041-.212 2.932.747.604.693 1.268 1.288 1.872 1.98.873 1.03.834 1.74.151 2.467-1.229 1.34-3.258 1.783-4.768.886-.833-.489-1.664-1.128-2.325-1.874-2.914-3.32-5.016-7.182-6.281-11.54a10.989 10.989 0 01-.342-2.139z"
-        stroke="#141517" stroke-width="2" stroke-miterlimit="10" />
+        stroke="currentColor" stroke-width="2" stroke-miterlimit="10" />
     </symbol>
 
     <!-- burger-icon -->

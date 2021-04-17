@@ -1,0 +1,31 @@
+.contacts__contact {
+  color: $mcg-1;
+  font-weight: inherit;
+
+  display: flex;
+  align-items: flex-start;
+  width: max-content;
+}
+
+.contacts__item {
+  &--phone {
+    @media (min-width: $desktop-width) {
+      margin-top: 19px;
+    }
+  }
+}
+
+.contacts__mail {
+  font-size: inherit;
+  line-height: inherit;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 20px;
+    margin-right: 15px;
+    margin-top: -2px;
+    background-image: $mail;
+  }
+}
