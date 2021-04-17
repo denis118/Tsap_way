@@ -101,6 +101,37 @@ const toggleMenu = () => {
   };
 };
 
+// Scroll to anchor
+
+const onNavListClick = (function () {
+  const directionsHeading = document.querySelector('h2[id="directions"]');
+  const pricesHeading = document.querySelector('h2[id="prices"]');
+  const { closeMenu } = toggleMenu();
+
+  return function (evt) {
+    evt.preventDefault();
+    if (document.documentElement.clientWidth < DESKTOP_WIDTH) {
+      closeMenu();
+    }
+
+    if (evt.target.matches('a[href="#directions"]')) {
+      directionsHeading.scrollIntoView({block: 'start', behavior: 'smooth'});
+    }
+
+    if (evt.target.matches('a[href="#prices"]')) {
+      pricesHeading.scrollIntoView({block: 'start', behavior: 'smooth'});
+    }
+
+    return undefined;
+  }
+})();
+
+(function () {
+  const navList = document.querySelector('.nav__list');
+  navList.addEventListener('click', onNavListClick);
+  return undefined;
+})();
+
 // WINDOW
 
 const onWindowResize = (function () {
@@ -112,6 +143,7 @@ const onWindowResize = (function () {
     setEventListeners,
     eraseEventListeners
   } = toggleMenu();
+
   let isModified = false;
 
   return function () {
@@ -144,6 +176,7 @@ const onWindowResize = (function () {
         isModified = false;
       }
     }
+
     return undefined;
   }
 })();
