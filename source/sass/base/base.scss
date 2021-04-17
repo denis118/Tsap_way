@@ -37,7 +37,11 @@
 
   @media (max-width: $pre-desktop-width) {
     grid-template-columns: 1fr;
-    width: 100%;
+    width: 94.531%;
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    width: 90%;
   }
 }
 

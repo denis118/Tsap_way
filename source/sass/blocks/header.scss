@@ -1,6 +1,6 @@
 .header__container {
-  outline: 1px dashed red;  // delete!!!
-  outline-offset: -1px;  // delete!!!
+  // outline: 1px dashed red;  // delete!!!
+  // outline-offset: -1px;  // delete!!!
 
   @media (min-width: $desktop-width) {
     align-items: center;
@@ -8,6 +8,7 @@
 
   @media (max-width: $pre-desktop-width) {
     color: $dcg-3;
+    width: 100%;
   }
 
   &--js {
