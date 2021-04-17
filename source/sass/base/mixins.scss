@@ -1,7 +1,7 @@
-// centering-flex
-@mixin centering-flex {
+// column-flex
+@mixin column-flex {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 

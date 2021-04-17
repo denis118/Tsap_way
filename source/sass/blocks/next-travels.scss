@@ -11,6 +11,10 @@
 .next-travels__list {
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $pre-tablet-width) {
+    justify-content: center;
+  }
 }
 
 .next-travels__item {
@@ -25,6 +29,16 @@
   &:nth-child(3n + 3) {
     margin-left: 50px;
   }
+
+  &:nth-child(n) {
+    @media (max-width: $pre-tablet-width) {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    width: 50%;
+  }
 }
 
 .next-travels__sublist {
@@ -32,6 +46,11 @@
 
   @media (max-width: $pre-desktop-width) {
     margin-bottom: 26px;
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    @include column-flex;
+    margin-bottom: 20px;
   }
 }
 

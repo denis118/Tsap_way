@@ -6,17 +6,12 @@
 }
 
 .footer__container {
-  // outline: 1px dashed rgb(0, 38, 255);  // delete!!!
-  // outline-offset: -1px;  // delete!!!
-
   @media (min-width: $desktop-width) {
     padding-bottom: 71px;
   }
 
-  @media (max-width: $pre-desktop-width) {
+  @media (min-width: $tablet-width) and (max-width: $pre-desktop-width) {
     grid-template-columns: 1fr min-content;
-    grid-template-rows: repeat(2, min-content);
-    column-gap: 0;
   }
 }
 
@@ -44,6 +39,15 @@
       grid-column-start: 1;
       grid-column-end: 2;
     }
+
+    @media (max-width: $pre-tablet-width) {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      background-image: $big-line-in-footer;
+      background-position: center bottom;
+      background-size: 288px 2px;
+      padding-top: 70px;
+    }
   }
 
   &--contacts {
@@ -60,6 +64,14 @@
       padding-right: 72px;
       padding-left: 49px;
       background-image: none;
+    }
+
+    @media (max-width: $pre-tablet-width) {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      padding-right: 0;
+      padding-left: 0;
+      padding-bottom: 21px;
     }
   }
 
@@ -87,6 +99,25 @@
       background-position: center top;
       background-size: 726px 2px;
     }
+
+    @media (max-width: $pre-tablet-width) {
+      grid-row-start: 3;
+      grid-row-end: 4;
+      padding-bottom: 31px;
+    }
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    @include column-flex;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding-top: 30px;
+  }
+
+  &:first-of-type {
+    @media (max-width: $pre-tablet-width) {
+      padding-top: 70px;
+    }
   }
 }
 
@@ -97,6 +128,10 @@
   font-weight: 600;
   box-sizing: border-box;
   margin-bottom: 22px;
+
+  @media (max-width: $pre-tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__corporate-travels-info {
