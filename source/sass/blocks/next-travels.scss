@@ -1,0 +1,43 @@
+.next-travels__heading {
+  @media (min-width: $desktop-width) {
+    padding-left: 14px;
+  }
+}
+
+.next-travels__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.next-travels__item {
+  &:nth-child(3n + 2) {
+    @media (min-width: $desktop-width) {
+      margin-left: 51px;
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    @media (min-width: $desktop-width) {
+      margin-left: 60px;
+    }
+  }
+}
+
+.next-travels__sublist {
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
+}
+
+.next-travels__subitem {
+  color: $dcg-3;
+  font-size: 14px;
+  line-height: 17.07px;
+  font-weight: 400;
+
+  &:not(:first-child) {
+    @media (min-width: $desktop-width) {
+      margin-top: 10px;
+    }
+  }
+}

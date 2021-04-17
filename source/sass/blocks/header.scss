@@ -3,7 +3,6 @@
   outline-offset: -1px;  // delete!!!
 
   @media (min-width: $desktop-width) {
-    color: $dcg-2;
     align-items: center;
   }
 
@@ -77,8 +76,6 @@
 }
 
 .header__phone {
-  color: inherit;
-
   @media (min-width: $desktop-width) {
     padding-right: 13px;
   }

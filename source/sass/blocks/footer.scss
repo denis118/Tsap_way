@@ -1,0 +1,39 @@
+.footer__container {
+  outline: 1px dashed rgb(0, 38, 255);  // delete!!!
+  outline-offset: -1px;  // delete!!!
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 75px;
+  }
+}
+
+.footer__section {
+  &--next-travels {
+    @media (min-width: $desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $desktop-width) {
+      grid-column-start: 5;
+      grid-column-end: 8;
+    }
+  }
+
+  &--corporate-travels {
+    @media (min-width: $desktop-width) {
+      grid-column-start: 8;
+      grid-column-end: -1;
+    }
+  }
+}
+
+.footer__heading {
+  color: inherit;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
