@@ -82,15 +82,13 @@
 
 .header__toggle {
   @media (max-width: $pre-desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: -1;
     justify-self: end;
     z-index: 1;
   }
 
   &--burger {
     @media (max-width: $pre-desktop-width) {
-      padding: 10px 21px 7px;
+      padding: 10px 21px 10px;
       background-color: $mcg-1;
     }
   }
@@ -105,8 +103,6 @@
 
 .header__one-track {
   @media (max-width: $pre-desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: -1;
   }

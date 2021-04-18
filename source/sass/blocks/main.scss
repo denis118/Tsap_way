@@ -9,22 +9,55 @@
   @media (min-resolution: 2dppx) {
     background-image: $aux-header-bg-desktop-2x;
   }
+
+  @media (max-width: $pre-desktop-width) {
+    background-image: $aux-header-bg-tablet;
+    background-size: 768px 344px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: $aux-header-bg-tablet-2x;
+    }
+  }
+}
+
+.main__container {
+  @media (max-width: $pre-desktop-width) {
+    place-items: center;
+  }
 }
 
 .main__element {
-  grid-column-start: 8;
-  grid-column-end: -1;
+  @media (min-width: $desktop-width) {
+    grid-column-start: 8;
+    grid-column-end: -1;
+  }
 }
 
 .main__heading {
-  font-size: 55px;
-  line-height: 80px;
   font-weight: 600;
 
+  @media (min-width: $desktop-width) {
+    font-size: 55px;
+    line-height: 80px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
   &--first-level {
-    letter-spacing: -1.10667px;
     width: 412px;
     margin-top: 185px;
+
+    @media (min-width: $desktop-width) {
+      letter-spacing: -1.10667px;
+    }
+
+    @media (max-width: $pre-desktop-width) {
+      margin-top: 60px;
+      padding-left: 7px;
+    }
   }
 }
 
@@ -32,6 +65,11 @@
   line-height: 27px;
   margin-top: 30px;
   width: 376px;
+
+  @media (max-width: $pre-desktop-width) {
+    margin-top: 15px;
+    text-align: center;
+  }
 }
 
 .main__view-tours {
@@ -42,11 +80,24 @@
   margin-bottom: 297px;
   justify-content: space-between;
 
+  @media (max-width: $pre-desktop-width) {
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 83px;
+    padding: 18px 39px 16px 40px;
+  }
+
   &::after {
     content: "";
     display: block;
     width: 16px;
     height: 16px;
     background-image: $arrow-down;
+  }
+}
+
+.main__unit {
+  @media (max-width: $pre-desktop-width) {
+    width: 398px;
   }
 }

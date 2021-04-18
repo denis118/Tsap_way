@@ -17,3 +17,9 @@
   display: grid;
   place-items: center;
 }
+
+// all-columns
+@mixin all-columns {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}

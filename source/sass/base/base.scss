@@ -88,6 +88,12 @@
   text-transform: uppercase;
 
   @include centering-flex;
+
+  @media (max-width: $pre-desktop-width) {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
 }
 
 .words-splitter {
@@ -104,4 +110,16 @@
 
 .letter-spacing-1 {
   letter-spacing: -0.466667px;
+}
+
+.pre-desktop-colums {
+  @media (max-width: $pre-desktop-width) {
+    @include all-columns;
+  }
+}
+
+.pre-tablet-colums {
+  @media (max-width: $pre-tablet-width) {
+    @include all-columns;
+  }
 }
