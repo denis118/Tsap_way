@@ -74,6 +74,7 @@
     line-height: 29px;
     font-weight: 500;
     letter-spacing: -0.415px;
+    pointer-events: none;
 
     @include one-track;
     align-self: end;
