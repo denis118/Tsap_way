@@ -89,7 +89,10 @@
   &--burger {
     @media (max-width: $pre-desktop-width) {
       padding: 10px 21px 10px;
-      background-color: $mcg-1;
+    }
+
+    @media (max-width: $pre-tablet-width) {
+      padding: 10px 10px 10px;
     }
   }
 

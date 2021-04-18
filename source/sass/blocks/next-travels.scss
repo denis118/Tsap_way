@@ -8,12 +8,6 @@
   }
 }
 
-// .next-travels__heading {
-//   @media (max-width: $pre-tablet-width) {
-//     margin-left: -10px;
-//   }
-// }
-
 .next-travels__list {
   display: flex;
   flex-wrap: wrap;
@@ -78,11 +72,14 @@
 }
 
 .next-travels__subitem {
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: inherit;
-
   &:not(:first-child) {
     margin-top: 10px;
   }
+}
+
+.next-travels__link {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: currentColor;
 }
