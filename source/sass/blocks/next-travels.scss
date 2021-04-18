@@ -8,6 +8,12 @@
   }
 }
 
+// .next-travels__heading {
+//   @media (max-width: $pre-tablet-width) {
+//     margin-left: -10px;
+//   }
+// }
+
 .next-travels__list {
   display: flex;
   flex-wrap: wrap;
@@ -19,25 +25,42 @@
 
 .next-travels__item {
   &:nth-child(3n + 2) {
-    margin-left: 51px;
+    @media (min-width: $tablet-width) {
+      margin-left: 51px;
+    }
 
-    @media (max-width: $pre-desktop-width) {
+    @media (min-width: $tablet-width) and (max-width: $pre-desktop-width) {
       margin-left: 45px;
     }
   }
 
   &:nth-child(3n + 3) {
-    margin-left: 50px;
+    @media (min-width: $tablet-width) {
+      margin-left: 50px;
+    }
   }
 
-  &:nth-child(n) {
+  &:nth-child(2n + 1) {
     @media (max-width: $pre-tablet-width) {
-      margin: 0;
+      margin-right: 6.946%;
+      box-sizing: border-box;
+    }
+  }
+
+  &:nth-child(1) {
+    @media (max-width: $pre-tablet-width) {
+      padding-right: 19px;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (max-width: $pre-tablet-width) {
+      padding-left: 5px;
     }
   }
 
   @media (max-width: $pre-tablet-width) {
-    width: 50%;
+    width: 46.527%;
   }
 }
 

@@ -71,7 +71,7 @@
       grid-row-end: 3;
       padding-right: 0;
       padding-left: 0;
-      padding-bottom: 21px;
+      padding-bottom: 14px;
     }
   }
 
@@ -131,6 +131,12 @@
 
   @media (max-width: $pre-tablet-width) {
     margin-bottom: 20px;
+  }
+
+  &--corporate {
+    @media (max-width: $pre-tablet-width) {
+      margin-bottom: 25px;
+    }
   }
 }
 

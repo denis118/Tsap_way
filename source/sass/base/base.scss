@@ -86,3 +86,9 @@
   vertical-align: middle;
   width: inherit;
 }
+
+.common-margin {
+  @media (max-width: $pre-tablet-width) {
+    margin-left: -10px;
+  }
+}
