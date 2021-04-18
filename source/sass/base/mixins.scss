@@ -23,3 +23,11 @@
   grid-column-start: 1;
   grid-column-end: -1;
 }
+
+// one-track
+@mixin one-track {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}

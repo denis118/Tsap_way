@@ -9,8 +9,9 @@ const autoprefixer = require('autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const del = require('del');
-const imagemin = require('gulp-imagemin');
 const minify = require('gulp-minify');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 const bs = require('browser-sync').create();
 
 // Cleaning
@@ -84,6 +85,16 @@ const minifyImages = () => {
 
 exports.minifyImages = minifyImages;
 
+// Webp
+
+const createWebp = () => {
+  return gulp.src('source/img/content/*.png')
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img/content"));
+}
+
+exports.createWebp = createWebp;
+
 // JS
 
 const jsmin = () => {
@@ -122,6 +133,7 @@ const build = gulp.series(
     minifyHtml,
     compileStyles,
     minifyImages,
+    createWebp,
     jsmin
   )
 );
@@ -135,6 +147,7 @@ exports.default = gulp.series(
   gulp.parallel(
     copyFonts, // в конце пересмотреть требования к сборке
     copyImages, // в конце пересмотреть требования к сборке
+    createWebp,
     minifyHtml,
     compileStyles,
     jsmin

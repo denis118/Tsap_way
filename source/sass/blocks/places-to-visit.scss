@@ -1,0 +1,101 @@
+.places-to-visit__container {
+  & > * {
+    @include all-columns;
+  }
+}
+
+.places-to-visit__heading {
+  @media (min-width: $desktop-width) {
+    @include column-flex;
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      display: block;
+      width: 229px;
+      height: 4px;
+      background-image: $directions-underline;
+      align-self: flex-start;
+      margin-top: 29px;
+    }
+  }
+}
+
+.places-to-visit__admonition {
+  @media (min-width: $desktop-width) {
+    width: 328px;
+    margin-top: 31px;
+  }
+}
+
+.places-to-visit__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    margin-top: 39px;
+  }
+}
+
+.places-to-visit__item {
+  @include centering-grid;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 101px;
+  }
+
+  &:nth-child(3n + 1) {
+    @media (min-width: $desktop-width) {
+      margin-right: 60px;
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    @media (min-width: $desktop-width) {
+      margin-left: 60px;
+    }
+  }
+
+  &:nth-child(3n + 4) {
+    @media (min-width: $desktop-width) {
+      margin-right: 120px;
+    }
+  }
+
+  &::after {
+    @include centering-grid;
+    width: 215px;
+    height: 61px;
+    content: attr(data-country);
+    background-color: $lcg-1;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    letter-spacing: -0.415px;
+
+    @include one-track;
+    align-self: end;
+    z-index: 1;
+  }
+
+  &--greece {
+    &::after {
+      @media (min-width: $desktop-width) {
+        height: 63px;
+      }
+    }
+  }
+}
+
+.places-to-visit__link {
+  @include one-track;
+}
+
+.places-to-visit__country-view {
+  @media (max-width: $pre-desktop-width) {
+    width: 288px;
+    height: 425px;
+  }
+}

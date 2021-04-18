@@ -49,6 +49,7 @@
 
 .main__heading {
   font-weight: 600;
+  color: $dcg-6;
 
   @media (min-width: $desktop-width) {
     font-size: 55px;
@@ -68,6 +69,7 @@
   &--first-level {
     width: 412px;
     margin-top: 185px;
+    color: inherit;
 
     @media (min-width: $desktop-width) {
       letter-spacing: -1.10667px;
@@ -79,6 +81,15 @@
 
     @media (max-width: $pre-tablet-width) {
       margin-top: 81px;
+    }
+  }
+
+  &--second-level {
+    width: 358px;
+    margin-top: 199px;
+
+    @media (min-width: $desktop-width) {
+      letter-spacing: -1.245px;
     }
   }
 }
