@@ -79,6 +79,15 @@
 
 .button {
   border: none;
+  background-color: $mcg-1;
+  color: $lcg-1;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @include centering-flex;
 }
 
 .words-splitter {
@@ -91,4 +100,8 @@
   @media (max-width: $pre-tablet-width) {
     margin-left: -10px;
   }
+}
+
+.letter-spacing-1 {
+  letter-spacing: -0.466667px;
 }

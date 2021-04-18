@@ -1,0 +1,52 @@
+.main__aux-header {
+  color: $lcg-1;
+  background-color: $dcg-5;
+  background-image: $aux-header-bg-desktop;
+  background-repeat: no-repeat;
+  background-size: 1920px 860px;
+  background-position: center top;
+
+  @media (min-resolution: 2dppx) {
+    background-image: $aux-header-bg-desktop-2x;
+  }
+}
+
+.main__element {
+  grid-column-start: 8;
+  grid-column-end: -1;
+}
+
+.main__heading {
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 600;
+
+  &--first-level {
+    letter-spacing: -1.10667px;
+    width: 412px;
+    margin-top: 185px;
+  }
+}
+
+.main__leading-paragraph {
+  line-height: 27px;
+  margin-top: 30px;
+  width: 376px;
+}
+
+.main__view-tours {
+  box-sizing: border-box;
+  width: 340px;
+  padding: 30px 39px 29px 40px;
+  margin-top: 32px;
+  margin-bottom: 297px;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: $arrow-down;
+  }
+}

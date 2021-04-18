@@ -15,6 +15,7 @@ $dcg-1: #000000;
 $dcg-2: #141517;
 $dcg-3: #48494d;
 $dcg-4: rgba(20, 21, 23, 0.5);
+$dcg-5: #507da0;
 
 // middle color`s group ( mcg )
 $mcg-1: #fe7865;
@@ -26,6 +27,15 @@ $lcg-3: #d7d9df;
 
 // bg
 $right-arrow: url("../img/decor/right-arrow.svg");
+$arrow-down: url("../img/decor/arrow-down.svg");
 $mail: url("../img/decor/mail.svg");
 $line-in-footer: url("../img/decor/line-in-footer.svg");
 $big-line-in-footer: url("../img/decor/big-line-in-footer.svg");
+
+// aux-header-bg
+$aux-header-bg-desktop: url("../img/bg/aux-header-bg-desktop.jpg");
+$aux-header-bg-desktop-2x: url("../img/bg/aux-header-bg-desktop@2x.jpg");
+$aux-header-bg-tablet: url("../img/bg/aux-header-bg-tablet.jpg");
+$aux-header-bg-tablet-2x: url("../img/bg/aux-header-bg-tablet@2x.jpg");
+$aux-header-bg-mobile: url("../img/bg/aux-header-bg-mobile.jpg");
+$aux-header-bg-mobile-2x: url("../img/bg/aux-header-bg-mobile@2x.jpg");

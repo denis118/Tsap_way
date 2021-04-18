@@ -1,8 +1,8 @@
 @import "~normalize.css/normalize";
 @import "./base/fonts.scss";
 @import "./base/vars.scss";
-@import "./base/base.scss";
 @import "./base/mixins.scss";
+@import "./base/base.scss";
 
 // header
 @import "./blocks/header.scss";
@@ -21,6 +21,9 @@
 
 // contacts
 @import "./blocks/contacts.scss";
+
+// main
+@import "./blocks/main.scss";
 
 // hidden entities
 @import "./base/hidden-entities.scss";

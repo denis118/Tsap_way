@@ -5,6 +5,13 @@
   align-items: center;
 }
 
+// centering-flex
+@mixin centering-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // centering-grid
 @mixin centering-grid {
   display: grid;
