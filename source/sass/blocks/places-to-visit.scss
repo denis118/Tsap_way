@@ -23,6 +23,10 @@
     margin-top: 80px;
   }
 
+  @media (max-width: $pre-tablet-width) {
+    margin-top: 108px;
+  }
+
   &::after {
     @media (min-width: $desktop-width) {
       content: "";
@@ -48,6 +52,10 @@
     width: 343px;
     margin-top: 20px;
   }
+
+  @media (max-width: $pre-tablet-width) {
+    margin-top: 20px;
+  }
 }
 
 .places-to-visit__list {
@@ -62,6 +70,10 @@
   @media (max-width: $pre-desktop-width) {
     margin-top: 21px;
   }
+
+  @media (max-width: $pre-tablet-width) {
+    margin-top: 20px;
+  }
 }
 
 .places-to-visit__item {
@@ -74,6 +86,11 @@
   @media (max-width: $pre-desktop-width) {
     margin-bottom: 0;
     margin-top: 19px;
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    margin-top: 0;
+    margin-bottom: 35px;
   }
 
   &:nth-child(3n + 1) {
@@ -95,13 +112,13 @@
   }
 
   &:nth-child(2n + 2) {
-    @media (max-width: $pre-desktop-width) {
+    @media (min-width: $tablet-width) and (max-width: $pre-desktop-width) {
       margin-left: 30px;
     }
   }
 
   &:last-child {
-    @media (max-width: $pre-desktop-width) {
+    @media (min-width: $tablet-width) and (max-width: $pre-desktop-width) {
       margin-top: 30px;
     }
   }
@@ -187,5 +204,9 @@
 .places-to-visit__element {
   @media (max-width: $pre-desktop-width) {
     text-align: center;
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    width: 100%;
   }
 }
