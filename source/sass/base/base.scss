@@ -117,3 +117,16 @@
     @include all-columns;
   }
 }
+
+.link-state {
+  &:hover,
+  &:focus {
+    color: $mcg-1;
+  }
+
+  &--phone {
+    .phone__svg {
+      color: currentColor;
+    }
+  }
+}
