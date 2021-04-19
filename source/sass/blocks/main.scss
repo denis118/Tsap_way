@@ -83,15 +83,6 @@
       margin-top: 81px;
     }
   }
-
-  &--second-level {
-    width: 358px;
-    margin-top: 199px;
-
-    @media (min-width: $desktop-width) {
-      letter-spacing: -1.245px;
-    }
-  }
 }
 
 .main__leading-paragraph {
