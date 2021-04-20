@@ -1,5 +1,12 @@
 .main {
   color: $dcg-7;
+
+  @media (min-width: $desktop-width) {
+    background-image: $guide-map-bg;
+    background-repeat: no-repeat;
+    background-size: 1444px 1089px;
+    background-position: left 50% top 100%;
+  }
 }
 
 .main__aux-header {
@@ -81,6 +88,31 @@
 
     @media (max-width: $pre-tablet-width) {
       margin-top: 81px;
+    }
+  }
+
+  &--fourth-level {
+    font-weight: 500;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    @media (max-width: $pre-tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &--underlined {
+    &::after {
+      @media (min-width: $desktop-width) {
+        content: "";
+        display: block;
+        background-image: $directions-underline;
+        align-self: flex-start;
+      }
     }
   }
 }

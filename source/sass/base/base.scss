@@ -30,8 +30,7 @@
   margin: 0 auto;
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 30px;
+    @include desktop-grid-columns;
     width: 60.938%;
   }
 
@@ -104,6 +103,20 @@
 
 .letter-spacing-1 {
   letter-spacing: -0.466667px;
+}
+
+.letter-spacing-2 {
+  @media (min-width: $desktop-width) {
+    letter-spacing: -1.245px;
+  }
+}
+
+.letter-spacing-3 {
+  letter-spacing: -0.691667px;
+}
+
+.letter-spacing-4 {
+  letter-spacing: -0.408333px;
 }
 
 .pre-desktop-colums {

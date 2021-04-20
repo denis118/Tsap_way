@@ -1,0 +1,184 @@
+.guide {
+  @media (min-width: $desktop-width) {
+    margin-top: -4px;
+  }
+}
+
+.guide__description {
+  background-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+
+    @include desktop-grid-columns;
+    padding-bottom: 16px;
+    background-size: 430px 596px;
+    background-position: right 36.5% top 100%;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    background-size: 768px 415px;
+    background-position: center;
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    background-size: 319px 415px;
+    background-position: center;
+  }
+
+  &--greece {
+    background-image: $greece-guide-bg-desktop;
+
+    @media (min-resolution: 2dppx) {
+      background-image: $greece-guide-bg-desktop-2x;
+    }
+  }
+}
+
+.guide__tabs-list {
+  display: flex;
+  align-items: center;
+  width: min-content;
+  max-width: 100%;
+  overflow-x: auto;
+
+  background-image: $tabs-underline;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: left bottom;
+}
+
+.guide__tab-item {
+  &:not(:first-child) {
+    margin-left: 99px;
+  }
+}
+
+.guide__tab-btn {
+  background-color: transparent;
+  color: $dcg-9;
+  font-size: 20px;
+  line-height: 24.38px;
+  font-weight: 500;
+  letter-spacing: -0.41px;
+  text-transform: none;
+  padding: 0 0 15px 0;
+  cursor: pointer;
+
+  &--active {
+    color: $mcg-1;
+  }
+}
+
+.guide__unite {
+  @media (min-width: $desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+.guide__heading {
+  @media (min-width: $desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 90px;
+    line-height: 90px;
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      width: 175px;
+      height: 3px;
+      margin-top: 14px;
+    }
+  }
+}
+
+.guide__text {
+  @media (min-width: $desktop-width) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: end;
+    margin-top: 30px;
+  }
+}
+
+.guide__buy-the-tour {
+  @media (min-width: $desktop-width) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: max-content;
+    padding: 30px 38px 30px 40px;
+    margin-top: 50px;
+  }
+}
+
+.guide__comments {
+  @media (min-width: $desktop-width) {
+    grid-column-start: 5;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    align-self: center;
+    transform: translate(388px, 49px);
+    background-color: $lcg-1;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 382px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    width: 268px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.guide__comments-heading {
+  margin-top: 30px;
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      width: 68px;
+      height: 1px;
+      margin-top: 11px;
+    }
+  }
+}
+
+.guide__quote-content {
+  font-size: 14px;
+  margin-top: 21px;
+}
+
+.guide__quote-cite {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    margin-bottom: 34px;
+  }
+}
+
+.guide__editor-avatar {
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.guide__quote-editor {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  font-style: normal;
+  color: $dcg-6;
+}

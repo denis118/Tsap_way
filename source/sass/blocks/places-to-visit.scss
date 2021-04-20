@@ -15,7 +15,6 @@
     @include column-flex;
     width: 358px;
     margin-top: 199px;
-    letter-spacing: -1.245px;
   }
 
   @media (max-width: $pre-desktop-width) {
@@ -29,12 +28,8 @@
 
   &::after {
     @media (min-width: $desktop-width) {
-      content: "";
-      display: block;
       width: 229px;
       height: 4px;
-      background-image: $directions-underline;
-      align-self: flex-start;
       margin-top: 29px;
     }
   }
@@ -209,4 +204,8 @@
   @media (max-width: $pre-tablet-width) {
     width: 100%;
   }
+}
+
+.places-to-visit__guide {
+  @include all-columns;
 }
