@@ -12,10 +12,20 @@
     background-image: $tabs-underline, $greece-guide-bg-tablet;
     background-repeat: no-repeat, no-repeat;
     background-size: 899px 2px, 768px 415px;
-    background-position: left -29% top 71.6%, left 0 top 98.7%;
+    background-position: left -29% top 71.6%, 50% 98.7%;
 
     @media (min-resolution: 2dppx) {
       background-image: $tabs-underline, $greece-guide-bg-tablet-2x;
+    }
+  }
+
+  @media (max-width: $pre-tablet-width) {
+    background-image: $tabs-underline, $greece-guide-bg-mobile;
+    background-size: 899px 2px, 319px 415px;
+    background-position: left -2.7% top 73.93%, 50% 98.2%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: $tabs-underline, $greece-guide-bg-mobile-2x;
     }
   }
 }

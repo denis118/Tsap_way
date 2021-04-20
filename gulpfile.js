@@ -144,13 +144,6 @@ exports.build = build;
 
 exports.default = gulp.series(
   clean,
-  gulp.parallel(
-    copyFonts, // в конце пересмотреть требования к сборке
-    copyImages, // в конце пересмотреть требования к сборке
-    createWebp,
-    minifyHtml,
-    compileStyles,
-    jsmin
-  ),
+  build,
   serve
 );
