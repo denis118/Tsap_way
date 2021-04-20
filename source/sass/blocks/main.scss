@@ -7,6 +7,17 @@
     background-size: 1444px 1089px;
     background-position: left 50% top 100%;
   }
+
+  @media (max-width: $pre-desktop-width) {
+    background-image: $tabs-underline, $greece-guide-bg-tablet;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 899px 2px, 768px 415px;
+    background-position: left -29% top 71.6%, left 0 top 98.7%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: $tabs-underline, $greece-guide-bg-tablet-2x;
+    }
+  }
 }
 
 .main__aux-header {
@@ -108,10 +119,7 @@
   &--underlined {
     &::after {
       @media (min-width: $desktop-width) {
-        content: "";
-        display: block;
-        background-image: $directions-underline;
-        align-self: flex-start;
+        @include underline-for-heading;
       }
     }
   }

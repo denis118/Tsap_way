@@ -2,6 +2,10 @@
   @media (min-width: $desktop-width) {
     margin-top: -4px;
   }
+
+  @media (max-width: $pre-desktop-width) {
+    margin-top: 99px;
+  }
 }
 
 .guide__description {
@@ -17,20 +21,20 @@
   }
 
   @media (max-width: $pre-desktop-width) {
-    background-size: 768px 415px;
-    background-position: center;
+    @include column-flex;
   }
 
   @media (max-width: $pre-tablet-width) {
     background-size: 319px 415px;
-    background-position: center;
   }
 
   &--greece {
-    background-image: $greece-guide-bg-desktop;
+    @media (min-width: $desktop-width) {
+      background-image: $greece-guide-bg-desktop;
 
-    @media (min-resolution: 2dppx) {
-      background-image: $greece-guide-bg-desktop-2x;
+      @media (min-resolution: 2dppx) {
+        background-image: $greece-guide-bg-desktop-2x;
+      }
     }
   }
 }
@@ -38,19 +42,37 @@
 .guide__tabs-list {
   display: flex;
   align-items: center;
-  width: min-content;
-  max-width: 100%;
-  overflow-x: auto;
 
-  background-image: $tabs-underline;
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
-  background-position: left bottom;
+  @media (min-width: $desktop-width) {
+    width: min-content;
+    background-image: $tabs-underline;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: left bottom;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    width: 726px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 0 0 16px;
+  }
 }
 
 .guide__tab-item {
+  @media (max-width: $pre-desktop-width) {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
   &:not(:first-child) {
     margin-left: 99px;
+  }
+
+  &:first-child {
+    @media (max-width: $pre-desktop-width) {
+      padding-left: 16px;
+    }
   }
 }
 
@@ -70,6 +92,14 @@
   }
 }
 
+.guide__description-item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
 .guide__unite {
   @media (min-width: $desktop-width) {
     grid-column-start: 1;
@@ -83,6 +113,11 @@
     grid-row-end: 2;
     margin-top: 90px;
     line-height: 90px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    text-align: center;
+    margin-top: 33px;
   }
 
   &::after {
@@ -101,19 +136,34 @@
     justify-self: end;
     margin-top: 30px;
   }
+
+  @media (max-width: $pre-desktop-width) {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
 }
 
 .guide__buy-the-tour {
+  width: max-content;
+
   @media (min-width: $desktop-width) {
     grid-row-start: 3;
     grid-row-end: 4;
-    width: max-content;
     padding: 30px 38px 30px 40px;
     margin-top: 50px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    padding: 19px 53px 19px 52px;
+    margin-top: 20px;
   }
 }
 
 .guide__comments {
+  background-color: $lcg-1;
+  box-sizing: border-box;
+
   @media (min-width: $desktop-width) {
     grid-column-start: 5;
     grid-column-end: -1;
@@ -122,8 +172,10 @@
 
     align-self: center;
     transform: translate(388px, 49px);
-    background-color: $lcg-1;
-    box-sizing: border-box;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    margin-top: 110px;
   }
 
   @media (min-width: $tablet-width) {
@@ -143,11 +195,10 @@
   margin-top: 30px;
 
   &::after {
-    @media (min-width: $desktop-width) {
-      width: 68px;
-      height: 1px;
-      margin-top: 11px;
-    }
+    @include underline-for-heading;
+    width: 68px;
+    height: 1px;
+    margin-top: 11px;
   }
 }
 

@@ -37,3 +37,11 @@
   grid-row-start: 1;
   grid-row-end: -1;
 }
+
+// underline-for-heading
+@mixin underline-for-heading {
+  content: "";
+  display: block;
+  background-image: $directions-underline;
+  align-self: flex-start;
+}
