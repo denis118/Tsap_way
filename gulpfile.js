@@ -142,8 +142,18 @@ exports.build = build;
 
 // Default
 
+// exports.default = gulp.series(
+//   clean,
+//   build,
+//   serve
+// );
+
 exports.default = gulp.series(
   clean,
-  build,
+  copyFonts,
+  minifyHtml,
+  compileStyles,
+  copyImages,
+  jsmin,
   serve
 );
