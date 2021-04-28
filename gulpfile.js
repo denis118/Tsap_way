@@ -154,6 +154,7 @@ exports.default = gulp.series(
   minifyHtml,
   compileStyles,
   copyImages,
+  createWebp,
   jsmin,
   serve
 );
