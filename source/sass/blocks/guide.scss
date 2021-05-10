@@ -12,58 +12,29 @@
   }
 }
 
-.guide__description {
-  background-repeat: no-repeat;
-
-  @media (min-width: $desktop-width) {
-    display: grid;
-
-    @include desktop-grid-columns;
-    padding-bottom: 16px;
-    background-size: 430px 596px;
-    background-position: right 36.5% top 100%;
-  }
-
-  @media (max-width: $pre-desktop-width) {
-    @include column-flex;
-  }
-
-  @media (max-width: $pre-tablet-width) {
-    background-size: 319px 415px;
-  }
-
-  &--greece {
-    @media (min-width: $desktop-width) {
-      background-image: $greece-guide-bg-desktop;
-
-      @media (min-resolution: 2dppx) {
-        background-image: $greece-guide-bg-desktop-2x;
-      }
-    }
-  }
-}
-
 .guide__tabs-list {
   display: flex;
   align-items: center;
+  background-image: $tabs-underline;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 
   @media (min-width: $desktop-width) {
-    width: min-content;
-    background-image: $tabs-underline;
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-    background-position: left bottom;
+    @include width-normalize;
+    flex-wrap: wrap;
+    background-size: 76.838% 2px;
   }
 
   @media (max-width: $pre-desktop-width) {
-    width: 726px;
+    width: 731px;
+    margin-right: 0;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding: 0 0 0 16px;
+    scroll-padding: 0 0 0 10px;
   }
 
   @media (max-width: $pre-tablet-width) {
-    width: 288px;
+    width: 305px;
   }
 }
 
@@ -75,16 +46,6 @@
 
   &:not(:first-child) {
     margin-left: 99px;
-  }
-
-  &:first-child {
-    @media (max-width: $pre-desktop-width) {
-      padding-left: 16px;
-    }
-
-    @media (max-width: $pre-tablet-width) {
-      padding-left: 0;
-    }
   }
 }
 
@@ -106,23 +67,69 @@
 
 .guide__description-item {
   display: none;
+  background-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    background-size: 430px 596px;
+    background-position: right 43.25% top 100%;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    background-size: 100%;
+    background-position: center bottom;
+  }
 
   &--active {
     display: block;
   }
+
+  &--greece {
+    @media (min-width: $desktop-width) {
+      background-image: $greece-guide-bg-desktop;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $greece-guide-bg-desktop-2x;
+      }
+    }
+
+    @media (max-width: $pre-desktop-width) {
+      background-image: $greece-guide-bg-tablet;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $greece-guide-bg-tablet-2x;
+      }
+    }
+
+    @media (max-width: $pre-tablet-width) {
+      background-image: $greece-guide-bg-mobile;
+
+      @media (min-resolution: 2dppx) {
+        background-image: $greece-guide-bg-mobile-2x;
+      }
+    }
+  }
 }
 
-.guide__unite {
+.guide__description {
+  @include width-normalize;
+
   @media (min-width: $desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-auto-rows: min-content;
+    padding-bottom: 16px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    @include column-flex;
   }
 }
 
 .guide__heading {
   @media (min-width: $desktop-width) {
-    grid-row-start: 1;
-    grid-row-end: 2;
+    @include all-columns;
+    grid-column-start: 1;
+    grid-column-end: 2;
     margin-top: 90px;
     line-height: 90px;
   }
@@ -147,9 +154,11 @@
 
 .guide__text {
   @media (min-width: $desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-    justify-self: end;
+    width: 370px;
     margin-top: 30px;
   }
 
@@ -164,6 +173,8 @@
   width: max-content;
 
   @media (min-width: $desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
     padding: 30px 38px 30px 40px;
@@ -186,17 +197,17 @@
   box-sizing: border-box;
 
   @media (min-width: $desktop-width) {
-    grid-column-start: 5;
+    grid-column-start: 3;
     grid-column-end: -1;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 4;
-
-    align-self: center;
-    transform: translate(388px, 49px);
+    align-self: start;
+    transform: translateY(-3px);
   }
 
   @media (max-width: $pre-desktop-width) {
-    margin-top: 110px;
+    margin-top: 79px;
+    transform: translateY(31px);
   }
 
   @media (min-width: $tablet-width) {
@@ -209,7 +220,8 @@
     width: 268px;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 100px;
+    margin-top: 33px;
+    transform: translateY(67px);
   }
 }
 

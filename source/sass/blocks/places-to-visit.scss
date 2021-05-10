@@ -1,8 +1,6 @@
 .places-to-visit__container {
-  & > * {
-    @media (min-width: $desktop-width) {
-      @include all-columns;
-    }
+  @media (min-width: $desktop-width) {
+    @include width-normalize;
   }
 
   @media (max-width: $pre-desktop-width) {
@@ -88,21 +86,42 @@
     margin-bottom: 35px;
   }
 
-  &:nth-child(3n + 1) {
-    @media (min-width: $desktop-width) {
-      margin-right: 60px;
-    }
-  }
+  // &:nth-child(2n + 2) {
+  //   @media (min-width: $tablet-width) and (max-width: $pre-desktop-width) {
+  //     margin-left: 30px;
+  //   }
+  // }
 
-  &:nth-child(3n + 3) {
+  // &:last-child {
+  //   @media (min-width: $tablet-width) and (max-width: $pre-desktop-width) {
+  //     margin-top: 30px;
+  //   }
+  // }
+
+  // &:nth-child(3n + 1) {
+  //   @media (min-width: $desktop-width) {
+  //     margin-right: 60px;
+  //   }
+  // }
+
+  &--albania,
+  &--macedonia,
+  &--croatia {
     @media (min-width: $desktop-width) {
       margin-left: 60px;
     }
   }
 
-  &:nth-child(3n + 4) {
+  &--montenegro {
     @media (min-width: $desktop-width) {
-      margin-right: 120px;
+      margin-right: 60px;
+      margin-left: auto;
+    }
+  }
+
+  &--croatia {
+    @media (min-width: $desktop-width) {
+      margin-right: auto;
     }
   }
 
@@ -164,7 +183,7 @@
   }
 
   &::after {
-    content: "смотреть подробнее";
+    content: attr(data-details);
     width: max-content;
     padding: 30px 25px;
     top: 50%;
@@ -206,8 +225,8 @@
   }
 }
 
-.places-to-visit__guide {
-  @media (min-width: $desktop-width) {
-    @include all-columns;
-  }
-}
+// .places-to-visit__guide {
+//   @media (min-width: $desktop-width) {
+//     @include all-columns;
+//   }
+// }

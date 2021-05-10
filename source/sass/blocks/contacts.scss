@@ -7,6 +7,7 @@
 .contacts__list {
   @media (max-width: $pre-tablet-width) {
     @include column-flex;
+    @include shift-to-left($shift-1);
   }
 }
 

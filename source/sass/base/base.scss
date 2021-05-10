@@ -1,53 +1,64 @@
-.body {
+body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows:
+    min-content
+    1fr
+    min-content;
   min-height: 100vh;
+  max-width: $body-max-width;
+  min-width: $body-min-width;
   background-color: $lcg-1;
 
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family:
+    "Montserrat",
+    "Arial",
+    sans-serif;
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
   color: $dcg-2;
-
-  @media (min-width: $desktop-width) {
-    min-width: $desktop-body-min-width;
-  }
-
-  @media (max-width: $pre-desktop-width) {
-    min-width: $tablet-body-min-width;
-  }
-
-  @media (max-width: $pre-tablet-width) {
-    min-width: $mobile-body-min-width;
-  }
 }
 
-.container {
-  display: grid;
-  grid-auto-rows: min-content;
-  margin: 0 auto;
-
-  @media (min-width: $desktop-width) {
-    @include desktop-grid-columns;
-    width: 60.938%;
-  }
-
-  @media (max-width: $pre-desktop-width) {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    width: 94.531%;
-  }
-
-  @media (max-width: $pre-tablet-width) {
-    width: 90%;
-  }
-}
-
-.zero-edges {
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+blockquote,
+cite {
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.link-states {
+  &:hover,
+  &:focus {
+    color: $mcg-1;
+  }
+
+  &--phone {
+    .phone__svg {
+      color: currentColor;
+    }
+  }
 }
 
 .visually-hidden {
@@ -61,19 +72,6 @@
   padding: 0;
   white-space: nowrap;
   overflow: hidden;
-}
-
-.list {
-  list-style: none;
-}
-
-.link {
-  display: block;
-  text-decoration: none;
-}
-
-.image {
-  display: block;
 }
 
 .button {
@@ -95,9 +93,21 @@
   }
 }
 
-.common-margin {
-  @media (max-width: $pre-tablet-width) {
-    margin-left: -10px;
+.container {
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    min-width: $width-1;
+  }
+
+  &--pre-desktop {
+    @media (max-width: $pre-desktop-width) {
+      min-width: $width-2;
+    }
+
+    @media (max-width: $pre-tablet-width) {
+      min-width: $width-3;
+    }
   }
 }
 
@@ -117,29 +127,4 @@
 
 .letter-spacing-4 {
   letter-spacing: -0.408333px;
-}
-
-.pre-desktop-colums {
-  @media (max-width: $pre-desktop-width) {
-    @include all-columns;
-  }
-}
-
-.pre-tablet-colums {
-  @media (max-width: $pre-tablet-width) {
-    @include all-columns;
-  }
-}
-
-.link-state {
-  &:hover,
-  &:focus {
-    color: $mcg-1;
-  }
-
-  &--phone {
-    .phone__svg {
-      color: currentColor;
-    }
-  }
 }

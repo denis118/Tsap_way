@@ -5,10 +5,14 @@ $tablet-width: 768px;
 $pre-tablet-width: 767px;
 $mobile-width: 320px;
 
-// body min-width (по макету)
-$desktop-body-min-width: 1920px;
-$tablet-body-min-width: $tablet-width;
-$mobile-body-min-width: $mobile-width;
+// body width limits (по макету)
+$body-max-width: 1920px;
+$body-min-width: $mobile-width;
+
+// container width
+$width-1: 60.9375%;
+$width-2: 94.531%;
+$width-3: 90%;
 
 // darken color`s group ( dcg )
 $dcg-1: #000000;
@@ -57,3 +61,12 @@ $greece-guide-bg-tablet: url("../img/bg/greece-guide-bg-tablet.png");
 $greece-guide-bg-tablet-2x: url("../img/bg/greece-guide-bg-tablet@2x.png");
 $greece-guide-bg-mobile: url("../img/bg/greece-guide-bg-mobile.png");
 $greece-guide-bg-mobile-2x: url("../img/bg/greece-guide-bg-mobile@2x.png");
+
+// shifts
+$shift-1: -10px;
+$shift-2: -5px;
+$shift-3: -22px;
+$shift-4: -6px;
+
+// gradients
+$gradient-1: linear-gradient($dcg-5 45%, $lcg-1 45%);

@@ -5,7 +5,7 @@ const DESKTOP_WIDTH = 1024;
 // Menu
 
 const toggleMenu = () => {
-  const headerContainer = document.querySelector('.header__container');
+  const header = document.querySelector('.header');
   const headerBox = document.querySelector('.header__box');
   const toggle = document.querySelector('.header__toggle');
   const burgerDescription = document.querySelector('#description-for-burger');
@@ -14,7 +14,7 @@ const toggleMenu = () => {
   const navCrossSvg = document.querySelector('#cross-in-nav-svg');
 
   const modifyHeader = () => {
-    headerContainer.classList.add('header__container--js');
+    header.classList.add('header--js');
     headerBox.classList.add('hidden-entity');
     toggle.classList.add('header__toggle--burger');
     [
@@ -26,7 +26,7 @@ const toggleMenu = () => {
   };
 
   const restoreHeader = () => {
-    headerContainer.classList.remove('header__container--js');
+    header.classList.remove('header--js');
     headerBox.classList.remove('hidden-entity');
     toggle.classList.remove('header__toggle--burger');
     [

@@ -1,7 +1,7 @@
-.header__container {
-  @media (min-width: $desktop-width) {
-    align-items: center;
-  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   @media (max-width: $pre-desktop-width) {
     color: $dcg-3;
@@ -16,15 +16,8 @@
 }
 
 .header__logo-link {
-  @media (min-width: $desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
   @media (max-width: $pre-desktop-width) {
-    justify-self: start;
     margin-left: 21px;
-    margin-top: 18.5px;
   }
 
   @media (max-width: $pre-tablet-width) {
@@ -41,12 +34,10 @@
 
 .header__box {
   @media (min-width: $desktop-width) {
-    grid-column-start: 7;
-    grid-column-end: 13;
-
     display: flex;
     justify-content: end;
     align-items: center;
+    margin-right: 14px;
   }
 
   @media (max-width: $pre-desktop-width) {
@@ -65,7 +56,6 @@
 }
 
 .header__nav {
-  margin-left: auto;
   margin-right: 53px;
 
   @media (max-width: $pre-desktop-width) {
@@ -75,14 +65,12 @@
 
 .header__phone {
   @media (min-width: $desktop-width) {
-    padding-right: 13px;
     color: inherit;
   }
 }
 
 .header__toggle {
   @media (max-width: $pre-desktop-width) {
-    justify-self: end;
     z-index: 1;
   }
 
@@ -101,12 +89,5 @@
       padding: 14px 13px 8px;
       background-color: transparent;
     }
-  }
-}
-
-.header__one-track {
-  @media (max-width: $pre-desktop-width) {
-    grid-row-start: 1;
-    grid-row-end: -1;
   }
 }

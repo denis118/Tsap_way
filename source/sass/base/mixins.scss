@@ -1,36 +1,32 @@
-// desktop-grid-columns
-@mixin desktop-grid-columns {
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 30px;
+@mixin outline($color) {
+  outline: 1px dashed $color;
+  outline-offset: -1px;
 }
 
-// column-flex
+//-------------------------------
+
 @mixin column-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-// centering-flex
 @mixin centering-flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-// centering-grid
 @mixin centering-grid {
   display: grid;
   place-items: center;
 }
 
-// all-columns
 @mixin all-columns {
   grid-column-start: 1;
   grid-column-end: -1;
 }
 
-// one-track
 @mixin one-track {
   grid-column-start: 1;
   grid-column-end: -1;
@@ -38,10 +34,26 @@
   grid-row-end: -1;
 }
 
-// underline-for-heading
+@mixin shift-to-left($value) {
+  margin-left: $value;
+  margin-right: 0;
+}
+
+@mixin shift-to-right($value) {
+  margin-right: $value;
+  margin-left: 0;
+}
+
 @mixin underline-for-heading {
   content: "";
   display: block;
   background-image: $directions-underline;
   align-self: flex-start;
+}
+
+@mixin width-normalize {
+  box-sizing: border-box;
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
 }

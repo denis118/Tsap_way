@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.min.css">
-  <title>Путешествие по Европе</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <link rel="preload"
+      href="./fonts/montserrat-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin>
+    <link rel="preload"
+      href="./fonts/montserrat-regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin>
+    <link rel="preload"
+      href="./fonts/montserrat-semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin>
+    <link rel="stylesheet"
+      href="./css/style.min.css">
+    <title>Путешествие по Европе</title>
+  </head>
 
-<body class="body zero-edges">
-  <header class="header">
-    <div class="header__container container">
-      <a class="header__logo-link header__one-track pre-desktop-colums link">
-        <img class="header__logo-img image"
-          src="./img/content/logo.svg"
-          width="58"
-          height="22"
-          alt="Логотип">
-      </a>
-      <div class="header__box header__one-track pre-desktop-colums">
-        <nav class="header__nav nav">
-          <ul class="nav__list list zero-edges">
-            <li class="nav__item nav__item--directions">
-              <a class="nav__link link link-state"
-                href="#directions">
-                О путешествии
-              </a>
-            </li>
-            <li class="nav__item nav__item--prices">
-              <a class="nav__link link link-state"
-                href="#prices">
-                Цены
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <a class="header__phone phone hidden-before-desktop link-state link-state--phone"
-          href="tel:+749978468446"
-          aria-label="Контактный телефон">
-          <svg class="phone__svg"
-            width="30"
-            height="30"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <use xlink:href="#phone-icon"></use>
-          </svg>
-          +7 (499) -784-684-46
-        </a>
-      </div>
-      <button class="header__toggle header__one-track button pre-desktop-colums hidden-on-desktop hidden-entity"
-        type="button">
-
-        <span class="visually-hidden hidden-entity"
-          id="description-for-burger">
-          Кнопка открытия меню навигации
-        </span>
-        <svg class="header__toggle-svg header__burger-svg hidden-entity"
+<body>
+  <header class="header container">
+    <a class="header__logo-link link">
+      <img class="header__logo-img image"
+        src="./img/content/logo.svg"
+        width="58"
+        height="22"
+        alt="Логотип">
+    </a>
+    <div class="header__box">
+      <nav class="header__nav nav">
+        <ul class="nav__list list">
+          <li class="nav__item nav__item--directions">
+            <a class="nav__link link link-states"
+              href="#directions">
+              О путешествии
+            </a>
+          </li>
+          <li class="nav__item nav__item--prices">
+            <a class="nav__link link link-states"
+              href="#prices">
+              Цены
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__phone phone link-states link-states--phone hidden-before-desktop"
+        href="tel:+749978468446"
+        aria-label="Контактный телефон">
+        <svg class="phone__svg"
           width="30"
           height="30"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          id="burger-svg">
-          <use xlink:href="#burger-icon"></use>
+          aria-hidden="true">
+          <use xlink:href="#phone-icon"></use>
         </svg>
-
-        <span class="visually-hidden hidden-entity"
-          id="description-for-cross-in-nav">
-          Кнопка закрытия меню навигации
-        </span>
-        <svg class="header__toggle-svg header__cross-svg hidden-entity"
-          width="24"
-          height="25"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          id="cross-in-nav-svg">
-          <use xlink:href="#cross-in-nav-icon"></use>
-        </svg>
-      </button>
+        +7 (499) -784-684-46
+      </a>
     </div>
+    <button class="header__toggle button hidden-on-desktop hidden-entity"
+      type="button">
+
+      <span class="visually-hidden hidden-entity"
+        id="description-for-burger">
+        Кнопка открытия меню навигации
+      </span>
+      <svg class="header__toggle-svg header__burger-svg hidden-entity"
+        width="30"
+        height="30"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        id="burger-svg">
+        <use xlink:href="#burger-icon"></use>
+      </svg>
+
+      <span class="visually-hidden hidden-entity"
+        id="description-for-cross-in-nav">
+        Кнопка закрытия меню навигации
+      </span>
+      <svg class="header__toggle-svg header__cross-svg hidden-entity"
+        width="24"
+        height="25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        id="cross-in-nav-svg">
+        <use xlink:href="#cross-in-nav-icon"></use>
+      </svg>
+    </button>
   </header>
+
   <main class="main">
     <header class="main__aux-header">
       <div class="main__container container">
-        <h1 class="main__heading main__heading--first-level main__element pre-desktop-colums main__unit zero-edges">
+        <h1 class="main__heading main__heading--first-level main__unit">
           Путешествие по Европе
         </h1>
-        <p class="main__leading-paragraph main__element letter-spacing-1 pre-desktop-colums main__unit zero-edges">
+        <p class="main__leading-paragraph letter-spacing-1 main__unit">
           В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море,
           горы, а также потрясающая красота природы.
         </p>
-        <a class="main__view-tours main__element pre-desktop-colums link button"
+        <a class="main__view-tours link button"
           href="#country-tabs">
           Cмотреть тур
         </a>
@@ -100,18 +116,19 @@
 
     <section class="main__places-to-visit main__section places-to-visit">
       <div class="places-to-visit__container container">
-        <h2 class="places-to-visit__heading places-to-visit__element main__heading main__heading--underlined zero-edges letter-spacing-2"
+        <h2 class="places-to-visit__heading places-to-visit__element main__heading main__heading--underlined  letter-spacing-2"
           id="directions">
           Места посещения
         </h2>
         <p class="places-to-visit__admonition places-to-visit__element letter-spacing-1">
           Вы можете выбрать полный тур или частичный, с посещением первых 3 мест
         </p>
-        <ul class="places-to-visit__list list zero-edges">
+        <ul class="places-to-visit__list list ">
           <li class="places-to-visit__item places-to-visit__item--greece"
             data-country="Греция">
             <a class="places-to-visit__link link"
-              href="#greece">
+              href="#greece"
+              data-details="смотреть подробнее">
               <picture>
                 <source type="image/webp"
                   media="(max-width: 1023px)"
@@ -143,7 +160,8 @@
           <li class="places-to-visit__item places-to-visit__item--albania"
             data-country="Албания">
             <a class="places-to-visit__link link"
-              href="#albania">
+              href="#albania"
+              data-details="смотреть подробнее">
               <picture>
                 <source type="image/webp"
                   media="(max-width: 1023px)"
@@ -175,7 +193,8 @@
           <li class="places-to-visit__item places-to-visit__item--macedonia"
             data-country="Македония">
             <a class="places-to-visit__link link"
-              href="#macedonia">
+              href="#macedonia"
+              data-details="смотреть подробнее">
               <picture>
                 <source type="image/webp"
                   media="(max-width: 1023px)"
@@ -207,7 +226,8 @@
           <li class="places-to-visit__item places-to-visit__item--montenegro"
             data-country="Черногория">
             <a class="places-to-visit__link link"
-              href="#montenegro">
+              href="#montenegro"
+              data-details="смотреть подробнее">
               <picture>
                 <source type="image/webp"
                   media="(max-width: 1023px)"
@@ -239,7 +259,8 @@
           <li class="places-to-visit__item places-to-visit__item--croatia"
             data-country="Хорватия">
             <a class="places-to-visit__link link"
-              href="#croatia">
+              href="#croatia"
+              data-details="смотреть подробнее">
               <picture>
                 <source type="image/webp"
                   media="(max-width: 1023px)"
@@ -269,254 +290,248 @@
             </a>
           </li>
         </ul>
+      </div>
 
-        <div class="places-to-visit__guide guide">
-          <ul class="guide__tabs-list list zero-edges">
-            <li class="guide__tab-item">
-              <button class="guide__tab-btn guide__tab-btn--active button"
-                type="button">
+      <div class="places-to-visit__guide guide">
+        <ul class="guide__tabs-list list container">
+          <li class="guide__tab-item">
+            <button class="guide__tab-btn guide__tab-btn--active button"
+              type="button">
+              Греция
+            </button>
+          </li>
+          <li class="guide__tab-item">
+            <button class="guide__tab-btn button"
+              type="button">
+              Албания
+            </button>
+          </li>
+          <li class="guide__tab-item">
+            <button class="guide__tab-btn button"
+              type="button">
+              Македония
+            </button>
+          </li>
+          <li class="guide__tab-item">
+            <button class="guide__tab-btn button"
+              type="button">
+              Черногория
+            </button>
+          </li>
+          <li class="guide__tab-item">
+            <button class="guide__tab-btn button"
+              type="button">
+              Хорватия
+            </button>
+          </li>
+        </ul>
+        <ul class="guide__descriptions-list list">
+          <li class="guide__description-item guide__description-item--greece guide__description-item--active">
+            <section class="guide__description guide__description--greece container container--pre-desktop"
+              id="greece">
+              <h3 class="guide__heading main__heading main__heading--underlined  letter-spacing-2">
                 Греция
-              </button>
-            </li>
-            <li class="guide__tab-item">
-              <button class="guide__tab-btn button"
-                type="button">
-                Албания
-              </button>
-            </li>
-            <li class="guide__tab-item">
-              <button class="guide__tab-btn button"
-                type="button">
-                Македония
-              </button>
-            </li>
-            <li class="guide__tab-item">
-              <button class="guide__tab-btn button"
-                type="button">
-                Черногория
-              </button>
-            </li>
-            <li class="guide__tab-item">
-              <button class="guide__tab-btn button"
-                type="button">
-                Хорватия
-              </button>
-            </li>
-          </ul>
-          <ul class="guide__descriptions-list list zero-edges">
-            <li class="guide__description-item guide__description-item--active">
-              <section class="guide__description guide__description--greece"
-                id="greece">
-                <h3 class="guide__heading guide__unite main__heading main__heading--underlined zero-edges letter-spacing-2">
-                  Греция
-                </h3>
-                <p class="guide__text guide__unite zero-edges letter-spacing-1">
-                  На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
-                </p>
-                <a class="guide__buy-the-tour guide__unite link button"
-                  href="#">
-                  Купить тур сейчас
-                </a>
-                <section class="guide__comments guide__comments--greece">
-                  <h4 class="guide__comments-heading main__heading main__heading--fourth-level main__heading--underlined zero-edges letter-spacing-3">
-                    Отзывы
-                  </h4>
-                  <ul class="guide__comments-list list zero-edges">
-                    <li class="guide__comments-item">
-                      <blockquote class="guide__quote zero-edges">
-                        <p class="guide__quote-content zero-edges letter-spacing-4">
-                          Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
-                        </p>
-                        <cite class="guide__quote-cite zero-edges">
-                          <picture>
-                            <source type="image/webp"
-                              srcset="
-                                ./img/content/vlada-golitsyna.webp    1x,
-                                ./img/content/vlada-golitsyna@2x.webp 2x
-                              " />
-                            <img class="guide__editor-avatar image"
-                              src="./img/content/vlada-golitsyna.png"
-                              width="38"
-                              height="38"
-                              alt="Аватар Влады Голициной"
-                              srcset="
-                                ./img/content/vlada-golitsyna@2x.png 2x
-                              " />
-                          </picture>
-                          <span class="guide__quote-editor letter-spacing-1">
-                            Влада Голицина
-                          </span>
-                        </cite>
-                      </blockquote>
-                    </li>
-                  </ul>
-                </section>
+              </h3>
+              <p class="guide__text letter-spacing-1">
+                На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
+              </p>
+              <a class="guide__buy-the-tour link button"
+                href="#">
+                Купить тур сейчас
+              </a>
+              <section class="guide__comments guide__comments--greece">
+                <h4 class="guide__comments-heading main__heading main__heading--fourth-level main__heading--underlined  letter-spacing-3">
+                  Отзывы
+                </h4>
+                <ul class="guide__comments-list list">
+                  <li class="guide__comments-item">
+                    <blockquote class="guide__quote">
+                      <p class="guide__quote-content letter-spacing-4">
+                        Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
+                      </p>
+                      <cite class="guide__quote-cite ">
+                        <picture>
+                          <source type="image/webp"
+                            srcset="
+                              ./img/content/vlada-golitsyna.webp    1x,
+                              ./img/content/vlada-golitsyna@2x.webp 2x
+                            " />
+                          <img class="guide__editor-avatar image"
+                            src="./img/content/vlada-golitsyna.png"
+                            width="38"
+                            height="38"
+                            alt="Аватар Влады Голициной"
+                            srcset="
+                              ./img/content/vlada-golitsyna@2x.png 2x
+                            " />
+                        </picture>
+                        <span class="guide__quote-editor letter-spacing-1">
+                          Влада Голицина
+                        </span>
+                      </cite>
+                    </blockquote>
+                  </li>
+                </ul>
               </section>
-            </li>
-          </ul>
-        </div>
+            </section>
+          </li>
+        </ul>
       </div>
     </section>
-
-    <!-- временно, чтобы JS находил этот елемент и не выдавал ошибку -->
-    <h2 class="visually-hidden" id="prices">Цены</h2>
-    <!-- // -->
-
   </main>
-  <footer class="footer">
+
+  <footer class="footer container container--pre-desktop">
     <h2 class="visually-hidden">
       Полезная информация
     </h2>
-    <div class="footer__container container">
-      <section class="footer__section footer__section--next-travels footer__section--bg pre-tablet-colums next-travels">
-        <h3 class="next-travels__heading footer__heading common-margin zero-edges">
-          Следующие путешествия
-        </h3>
-        <ul class="next-travels__list list zero-edges">
-          <li class="next-travels__item">
-            <ul class="next-travels__sublist list zero-edges">
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Марсель
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Ним
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Монпелье
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Барселона
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Пальма
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="next-travels__item">
-            <ul class="next-travels__sublist list zero-edges">
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Сардиния
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Палермо
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Катания
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Неаполь
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Рим
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="next-travels__item">
-            <ul class="next-travels__sublist list zero-edges">
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Корс
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Ницца
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Монако
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Динь-ле-Бен
-                </a>
-              </li>
-              <li class="next-travels__subitem">
-                <a class="next-travels__link link"
-                  href="#">
-                  Гренобль
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section class="footer__section footer__section--contacts footer__section--bg pre-tablet-colums contacts">
-        <h3 class="contacts__heading footer__heading common-margin zero-edges">
-          Наши контакты
-        </h3>
-        <ul class="contacts__list list zero-edges common-margin">
-          <li class="contacts__item contacts__item--mail">
-            <a class="contacts__contact contacts__mail"
-              href="mailto:puteshestviemechta@gmail.ru"
-              aria-label="Электронная почта"
-              data-label="Почта">
-              <span class="hidden-before-desktop">
-                puteshestviemechta@gmail.ru
-              </span>
-            </a>
-          </li>
-          <li class="contacts__item contacts__item--phone">
-            <a class="contacts__contact contacts__phone phone phone--footer"
-              href="tel:+749978468446"
-              aria-label="Контактный телефон">
-              <svg class="phone__svg phone__svg--footer"
-                width="30"
-                height="30"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <use xlink:href="#phone-icon"></use>
-              </svg>
-              +7 (499) -784-684-46
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="footer__section footer__section--corporate-travels pre-desktop-colums">
-        <h3 class="footer__section-heading footer__heading footer__heading--corporate zero-edges">
-          Корпоративные путешествия
-        </h3>
-        <p class="footer__corporate-travels-info zero-edges">
-          Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением
-        </p>
-      </section>
-    </div>
+    <section class="footer__section footer__section--next-travels footer__section--bg pre-tablet-colums next-travels">
+      <h3 class="next-travels__heading footer__heading common-margin ">
+        Следующие путешествия
+      </h3>
+      <ul class="next-travels__list list ">
+        <li class="next-travels__item">
+          <ul class="next-travels__sublist list ">
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Марсель
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Ним
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Монпелье
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Барселона
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Пальма
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="next-travels__item">
+          <ul class="next-travels__sublist list ">
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Сардиния
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Палермо
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Катания
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Неаполь
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Рим
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="next-travels__item">
+          <ul class="next-travels__sublist list ">
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Корс
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Ницца
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Монако
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Динь-ле-Бен
+              </a>
+            </li>
+            <li class="next-travels__subitem">
+              <a class="next-travels__link link"
+                href="#">
+                Гренобль
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__section footer__section--contacts footer__section--bg contacts">
+      <h3 class="contacts__heading footer__heading">
+        Наши контакты
+      </h3>
+      <ul class="contacts__list list  common-margin">
+        <li class="contacts__item contacts__item--mail">
+          <a class="contacts__contact contacts__mail"
+            href="mailto:puteshestviemechta@gmail.ru"
+            aria-label="Электронная почта"
+            data-label="Почта">
+            <span class="hidden-before-desktop">
+              puteshestviemechta@gmail.ru
+            </span>
+          </a>
+        </li>
+        <li class="contacts__item contacts__item--phone">
+          <a class="contacts__contact contacts__phone phone phone--footer"
+            href="tel:+749978468446"
+            aria-label="Контактный телефон">
+            <svg class="phone__svg phone__svg--footer"
+              width="30"
+              height="30"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <use xlink:href="#phone-icon"></use>
+            </svg>
+            +7 (499) -784-684-46
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer__section footer__section--corporate-travels">
+      <h3 class="footer__section-heading footer__heading footer__heading--corporate footer__unit">
+        Корпоративные путешествия
+      </h3>
+      <p class="footer__corporate-travels-info footer__unit">
+        Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением
+      </p>
+    </section>
   </footer>
 
   <svg style="display: none">
@@ -543,5 +558,4 @@
 
   <script src="./js/index.min.js" defer></script>
 </body>
-
 </html>
